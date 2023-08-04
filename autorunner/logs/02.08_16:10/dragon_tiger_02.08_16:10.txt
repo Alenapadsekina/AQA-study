@@ -1,0 +1,120 @@
+
+> aqa-study@1.0.0 test:dt
+> jest --forceExit --detectOpenHandles ./tests/smoke_tests/smoke_dragon_tiger.test.js --timeout=300000
+
+  console.log
+    BALANCE: 2,108.63
+
+      at Balance.log [as assignInitialBalance] (tests/navigation/Balance.js:30:13)
+
+  console.log
+    BET AMOUNT IS : 25
+
+      at Balance.log [as getBetAmount] (tests/navigation/Balance.js:15:13)
+
+  console.log
+    BET AMOUNT IS : 25
+
+      at Balance.log [as getBetAmount] (tests/navigation/Balance.js:15:13)
+
+FAIL tests/smoke_tests/smoke_dragon_tiger.test.js (28.605 s)
+  ● Place a bet: Dragon Tiger › should check balance
+
+    ProtocolError: Waiting for selector `iframe` failed: Protocol error (Runtime.callFunctionOn): Argument should belong to the same JavaScript world as target object
+
+      at new Callback (node_modules/puppeteer-core/src/common/Connection.ts:66:12)
+      at CallbackRegistry.create (node_modules/puppeteer-core/src/common/Connection.ts:127:22)
+      at Connection._rawSend (node_modules/puppeteer-core/src/common/Connection.ts:278:22)
+      at CDPSessionImpl.send (node_modules/puppeteer-core/src/common/Connection.ts:537:29)
+      at ExecutionContext._ExecutionContext_evaluate (node_modules/puppeteer-core/src/common/ExecutionContext.ts:314:44)
+      at ExecutionContext.evaluate (node_modules/puppeteer-core/src/common/ExecutionContext.ts:189:12)
+      at CDPJSHandle.evaluate (node_modules/puppeteer-core/src/common/JSHandle.ts:83:12)
+      at WaitTask.rerun (node_modules/puppeteer-core/src/common/WaitTask.ts:156:7)
+
+  ● Place a bet: Dragon Tiger › Should place a bet: dragon
+
+    ProtocolError: Waiting for selector `iframe` failed: Protocol error (Runtime.callFunctionOn): Argument should belong to the same JavaScript world as target object
+
+      at new Callback (node_modules/puppeteer-core/src/common/Connection.ts:66:12)
+      at CallbackRegistry.create (node_modules/puppeteer-core/src/common/Connection.ts:127:22)
+      at Connection._rawSend (node_modules/puppeteer-core/src/common/Connection.ts:278:22)
+      at CDPSessionImpl.send (node_modules/puppeteer-core/src/common/Connection.ts:537:29)
+      at ExecutionContext._ExecutionContext_evaluate (node_modules/puppeteer-core/src/common/ExecutionContext.ts:314:44)
+      at ExecutionContext.evaluate (node_modules/puppeteer-core/src/common/ExecutionContext.ts:189:12)
+      at CDPJSHandle.evaluate (node_modules/puppeteer-core/src/common/JSHandle.ts:83:12)
+      at WaitTask.rerun (node_modules/puppeteer-core/src/common/WaitTask.ts:156:7)
+
+  ● Place a bet: Dragon Tiger › Should check bet amount
+
+    ProtocolError: Waiting for selector `iframe` failed: Protocol error (Runtime.callFunctionOn): Argument should belong to the same JavaScript world as target object
+
+      at new Callback (node_modules/puppeteer-core/src/common/Connection.ts:66:12)
+      at CallbackRegistry.create (node_modules/puppeteer-core/src/common/Connection.ts:127:22)
+      at Connection._rawSend (node_modules/puppeteer-core/src/common/Connection.ts:278:22)
+      at CDPSessionImpl.send (node_modules/puppeteer-core/src/common/Connection.ts:537:29)
+      at ExecutionContext._ExecutionContext_evaluate (node_modules/puppeteer-core/src/common/ExecutionContext.ts:314:44)
+      at ExecutionContext.evaluate (node_modules/puppeteer-core/src/common/ExecutionContext.ts:189:12)
+      at CDPJSHandle.evaluate (node_modules/puppeteer-core/src/common/JSHandle.ts:83:12)
+      at WaitTask.rerun (node_modules/puppeteer-core/src/common/WaitTask.ts:156:7)
+
+  ● Place a bet: Dragon Tiger › Should deduct bet from balance
+
+    ProtocolError: Waiting for selector `iframe` failed: Protocol error (Runtime.callFunctionOn): Argument should belong to the same JavaScript world as target object
+
+      at new Callback (node_modules/puppeteer-core/src/common/Connection.ts:66:12)
+      at CallbackRegistry.create (node_modules/puppeteer-core/src/common/Connection.ts:127:22)
+      at Connection._rawSend (node_modules/puppeteer-core/src/common/Connection.ts:278:22)
+      at CDPSessionImpl.send (node_modules/puppeteer-core/src/common/Connection.ts:537:29)
+      at ExecutionContext._ExecutionContext_evaluate (node_modules/puppeteer-core/src/common/ExecutionContext.ts:314:44)
+      at ExecutionContext.evaluate (node_modules/puppeteer-core/src/common/ExecutionContext.ts:189:12)
+      at CDPJSHandle.evaluate (node_modules/puppeteer-core/src/common/JSHandle.ts:83:12)
+      at WaitTask.rerun (node_modules/puppeteer-core/src/common/WaitTask.ts:156:7)
+
+
+  ● Test suite failed to run
+
+    Manifest not found
+
+      at preload (https:/cit1-prototype.evolutiongaming.com/frontend/evo/r0/index.coop.html:0:169684)
+
+  ● Test suite failed to run
+
+    Manifest not found
+
+      at preload (https:/cit1-prototype.evolutiongaming.com/frontend/evo/r0/index.coop.html:0:169684)
+
+  ● Test suite failed to run
+
+    net::ERR_ABORTED at https://cit1-prototype.evolutiongaming.com/frontend/evo/r0/index.coop.html#provider=evolution&game=dragontiger&table_id=DragonTiger00001
+
+      4 | export default class AbstractGame {
+      5 |   async openTable(baseUrl, game, tableId) {
+    > 6 |     await page.goto(baseUrl + `&game=${game}&table_id=${tableId}`);
+        |     ^
+      7 |     await page.waitForSelector(".loader-frame-container");
+      8 |   }
+      9 |
+
+      at navigate (node_modules/puppeteer-core/src/common/Frame.ts:173:13)
+      at Frame.goto (node_modules/puppeteer-core/src/common/Frame.ts:126:17)
+      at CDPPage.goto (node_modules/puppeteer-core/src/common/Page.ts:932:12)
+      at AbstractGame.openTable (tests/navigation/AbstractGame.js:6:5)
+      at GenericSmokeTest.setPrecondition (tests/smoke_tests/GenericSmokeTest.js:13:5)
+
+  ● Test suite failed to run
+
+    Manifest not found
+
+      at preload (https:/cit1-prototype.evolutiongaming.com/frontend/evo/r0/index.coop.html:0:169684)
+
+  ● Test suite failed to run
+
+    Manifest not found
+
+      at preload (https:/cit1-prototype.evolutiongaming.com/frontend/evo/r0/index.coop.html:0:169684)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 7 passed, 11 total
+Snapshots:   0 total
+Time:        28.687 s
+Ran all test suites matching /.\/tests\/smoke_tests\/smoke_dragon_tiger.test.js/i.

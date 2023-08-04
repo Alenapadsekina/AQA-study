@@ -1,0 +1,30 @@
+
+> aqa-study@1.0.0 test:ab
+> jest ./tests/smoke_tests/smoke_andar_bahar.test.js
+
+/Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/lib/cjs/puppeteer/common/LifecycleWatcher.js:83
+            (0, util_js_1.addEventListener)(frameManager.client, Connection_js_1.CDPSessionEmittedEvents.Disconnected, __classPrivateFieldGet(this, _LifecycleWatcher_instances, "m", _LifecycleWatcher_terminate).bind(this, new Error('Navigation failed because browser has disconnected!'))),
+                                                                                                                                                                                                                              ^
+
+Error: Navigation failed because browser has disconnected!
+    at new LifecycleWatcher (/Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/src/common/LifecycleWatcher.ts:114:11)
+    at Frame.goto (/Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/src/common/Frame.ts:120:21)
+    at CDPPage.goto (/Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/src/common/Page.ts:932:35)
+    at LoginPage.visit (/Users/apadsekina/Desktop/AQA-study/tests/navigation/LoginPage.js:12:16)
+    at LoginPage.loginToApp (/Users/apadsekina/Desktop/AQA-study/tests/navigation/LoginPage.js:24:16)
+    at GenericSmokeTest.setPrecondition (/Users/apadsekina/Desktop/AQA-study/tests/smoke_tests/GenericSmokeTest.js:18:21)
+    at Object.<anonymous> (/Users/apadsekina/Desktop/AQA-study/tests/smoke_tests/GenericSmokeTest.js:48:14)
+    at Promise.then.completed (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-circus/build/utils.js:293:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-circus/build/utils.js:226:10)
+    at _callCircusHook (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-circus/build/run.js:262:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTestsForDescribeBlock (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-circus/build/run.js:92:7)
+    at _runTestsForDescribeBlock (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-circus/build/run.js:130:9)
+    at run (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-circus/build/run.js:68:3)
+    at runAndTransformResultsToJestFormat (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/apadsekina/Desktop/AQA-study/node_modules/jest-runner/build/runTest.js:444:34)
+
+Node.js v18.12.1

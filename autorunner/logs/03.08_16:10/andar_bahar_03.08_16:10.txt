@@ -1,0 +1,16 @@
+
+> aqa-study@1.0.0 test:ab
+> jest ./tests/smoke_tests/smoke_andar_bahar.test.js
+
+/Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/lib/cjs/puppeteer/common/Connection.js:429
+            return Promise.reject(new Errors_js_1.TargetCloseError(`Protocol error (${method}): Session closed. Most likely the ${__classPrivateFieldGet(this, _CDPSessionImpl_targetType, "f")} has been closed.`));
+                                  ^
+
+TargetCloseError: Waiting for selector `#loginForm` failed: Protocol error (Runtime.evaluate): Session closed. Most likely the page has been closed.
+    at CDPSessionImpl.send (/Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/src/common/Connection.ts:528:9)
+    at ExecutionContext._ExecutionContext_evaluate (/Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/src/common/ExecutionContext.ts:288:10)
+    at ExecutionContext.evaluateHandle (/Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/src/common/ExecutionContext.ts:248:26)
+    at /Users/apadsekina/Desktop/AQA-study/node_modules/puppeteer-core/src/common/ExecutionContext.ts:123:21
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+Node.js v18.12.1

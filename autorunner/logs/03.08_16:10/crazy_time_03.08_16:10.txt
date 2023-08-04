@@ -1,0 +1,41 @@
+
+> aqa-study@1.0.0 test:ct
+> jest --forceExit --detectOpenHandles ./tests/smoke_tests/smoke_crazy_time.test.js --timeout=300000
+
+  console.log
+    BALANCE: 1,968.63
+
+      at Balance.log [as assignInitialBalance] (tests/navigation/Balance.js:30:13)
+
+  console.log
+    BET AMOUNT IS : 20
+
+      at Balance.log [as getBetAmount] (tests/navigation/Balance.js:15:13)
+
+  console.log
+    BET AMOUNT IS : 20
+
+      at Balance.log [as getBetAmount] (tests/navigation/Balance.js:15:13)
+
+FAIL tests/smoke_tests/smoke_crazy_time.test.js (58.425 s)
+  Smoke: Crazy Time
+    ✓ Should change sound (1075 ms)
+    ✕ Should send message in chat (30003 ms)
+    ✓ Should give tip (307 ms)
+  Place a bet: Crazy Time
+    ✓ should check balance (46 ms)
+    ✓ Should place a bet: bet on all (5104 ms)
+    ✓ Should check bet amount (2022 ms)
+    ✓ Should deduct bet from balance (2022 ms)
+
+  ● Smoke: Crazy Time › Should send message in chat
+
+    TimeoutError: Waiting for selector `button[data-role="chat-button"]` failed: Waiting failed: 30000ms exceeded
+
+      at Timeout.<anonymous> (node_modules/puppeteer-core/src/common/WaitTask.ts:92:11)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        58.527 s
+Ran all test suites matching /.\/tests\/smoke_tests\/smoke_crazy_time.test.js/i.

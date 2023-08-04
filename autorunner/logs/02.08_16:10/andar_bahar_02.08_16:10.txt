@@ -1,0 +1,15 @@
+
+> aqa-study@1.0.0 test:ab
+> jest ./tests/smoke_tests/smoke_andar_bahar.test.js
+
+/Users/apadsekina/Desktop/AQA-study/tests/navigation/LoginPage.js:15
+    await page.waitForSelector("#loginForm");
+               ^
+
+TypeError: Cannot read properties of undefined (reading 'waitForSelector')
+    at LoginPage.isLoginFormDisplayed (/Users/apadsekina/Desktop/AQA-study/tests/navigation/LoginPage.js:15:16)
+    at LoginPage.loginToApp (/Users/apadsekina/Desktop/AQA-study/tests/navigation/LoginPage.js:25:16)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at GenericSmokeTest.setPrecondition (/Users/apadsekina/Desktop/AQA-study/tests/smoke_tests/GenericSmokeTest.js:18:5)
+
+Node.js v18.12.1
